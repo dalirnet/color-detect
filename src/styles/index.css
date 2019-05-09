@@ -1,0 +1,198 @@
+body {
+    font-family: IranSansWebFont, 'Segoe UI', Tahoma;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 14px;
+    text-align: center;
+    background: #f1f1f1;
+    direction: rtl;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    font-family: IranSansWebFont, 'Segoe UI', Tahoma !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    outline: none !important;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input:focus,
+a:focus {
+    outline: none !important;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+p,
+span {
+    margin: 0;
+    vertical-align: middle;
+}
+
+#root {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.image {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 6px;
+    background: #f9f9f9;
+}
+
+#frame {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    right: 50px;
+    bottom: 50px;
+}
+
+#file {
+    position: absolute;
+    display: none;
+}
+
+.input {
+    position: absolute;
+    background: #f1f1f1;
+    color: #9a9a9a;
+    width: 160px;
+    height: 50px;
+    padding: 13px 20px;
+    border-radius: 4px;
+    bottom: 50%;
+    right: 50%;
+    margin: 0 -80px -25px 0;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#frame.active .input {
+    bottom: 0;
+    right: 0;
+    margin: 0;
+}
+
+.input:hover {
+    background: #eaeaea;
+}
+
+.input .icon-camera {
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+#frame img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 60%;
+    max-height: 70%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+}
+
+.overlay {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 4px 8px #fff;
+    opacity: 0.4;
+    animation: scale 1s ease infinite alternate both;
+    cursor: pointer;
+}
+
+.overlay:hover {
+    opacity: 1 !important;
+    animation: none;
+}
+
+.overlay:hover::after {
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    background: inherit;
+}
+
+.overlay::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 50%;
+    left: 50%;
+    margin: -2px 0 0 -2px;
+    background: #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: all 300ms ease;
+}
+
+.overlay._2 {
+    animation-delay: 1s;
+}
+
+.overlay._3 {
+    animation-delay: 2s;
+}
+
+.overlay._4 {
+    animation-delay: 3s;
+}
+
+.overlay._5 {
+    animation-delay: 4s;
+}
+
+.overlay._6 {
+    animation-delay: 5s;
+}
+
+@keyframes scale {
+
+    0%,
+    90%,
+    100% {
+        transform: scale(1) rotate(0deg);
+        box-shadow: 0 0 4px 4px #fff;
+        opacity: 0.4;
+        border-radius: 50%;
+    }
+
+    40% {
+        transform: scale(1.2) rotate(355deg);
+        box-shadow: 0 0 4px 8px #fff;
+        opacity: 1;
+        border-radius: 30%;
+    }
+}
